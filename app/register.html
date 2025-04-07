@@ -97,52 +97,48 @@
                         <div class="apply-wrapper">
                             <!-- Form -->
                            	<h2>Register</h2>
-							<form action="/register" method="POST">
-								
-								<div class="input-group">
-									<label for="fullname">First Name</label>
-									<input type="fullname" id="fullname" name="fullname" required>
-								</div>
+                               <form id="registerForm">
                                 <div class="input-group">
-									<label for="lastname">Lastname</label>
-									<input type="lastname" id="lastname" name="lastname" required>
-								</div>
-
+                                    <label for="first_name">First Name</label>
+                                    <input type="text" id="first_name" name="first_name" required>
+                                </div>
                                 <div class="input-group">
-									<label for="idnumber">ID Number</label>
-									<input type="idnumber" id="idnumber" name="idnumber" required>
-								</div>
+                                    <label for="last_name">Last Name</label>
+                                    <input type="text" id="last_name" name="last_name" required>
+                                </div>
                                 <div class="input-group">
-									<label for="email">Email address </label>
-									<input type="text" id="email" name="Email " required>
-								</div>
-
-                                     <!-- Radio -->
-                                    
-                                      <label>* Select Gender :</label><br/>
-                                     <!--Radio Select -->
-                                     <div class="radio">
-                                     <input id="radio" name="radio" type="radio" checked="">
-                                     <label for="radio-6" class="radio-label">Male</label>
-                                     </div>
-                                     <div class="radio">
-                                     <input id="radio" name="radio" type="radio">
-                                     <label for="radio-7" class="radio-label">Female</label>
-                                     </div>
-                                    <!-- Radio -->
-								<div class="input-group">
-									<label for="password">Password</label>
-									<input type="password" id="password" name="password" required>
-								</div>
+                                    <label for="id_number">ID Number</label>
+                                    <input type="text" id="id_number" name="id_number" required>
+                                </div>
                                 <div class="input-group">
-									<label for="password">Confirm-Password</label>
-									<input type="password" id="password" name="password" required>
-								</div>
-                                <input type="checkbox" id="agreement" name="agreement">
-                                 <label for="agreement">I have read and accept the terms and agree <a href="policy.html">Private Policy</a> to the use of my personal information for the purpose set out therein.</label>
-
-								<button type="submit" class="btn" style="color: azure;">Register</button>
-							</form>
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="input-group">
+                                    <label for="phone_number">Phone Number</label>
+                                    <input type="text" id="phone_number" name="phone_number" required>
+                                </div>
+                                <label>* Select Gender:</label><br>
+                                <div class="radio">
+                                    <input id="gender_male" name="gender" type="radio" value="male" required>
+                                    <label for="gender_male" class="radio-label">Male</label>
+                                </div>
+                                <div class="radio">
+                                    <input id="gender_female" name="gender" type="radio" value="female">
+                                    <label for="gender_female" class="radio-label">Female</label>
+                                </div>
+                                <div class="input-group">
+                                    <label for="password">Password</label>
+                                    <input type="password" id="password" name="password" required>
+                                </div>
+                                <div class="input-group">
+                                    <label for="confirm_password">Confirm Password</label>
+                                    <input type="password" id="confirm_password" name="confirm_password" required>
+                                </div>
+                                <input type="checkbox" id="agreement" name="agreement" required>
+                                <label for="agreement">I have read and accept the terms and agree <a href="policy.html">Private Policy</a> to the use of my personal information for the purpose set out therein.</label>
+                                <button type="submit" class="btn" style="color: azure;">Register</button>
+                            </form>
 							<a href="login.html" class="login-link">Already have an account? Login</a>
 				    	</div>
                              <!-- End From -->
@@ -245,6 +241,7 @@
 
 
     <!-- JS here -->
+        <script src="./BussinessLogic/register.js"></script>
 		<!-- All JS Custom Plugins Link Here here -->
         <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
 		<!-- Jquery, Popper, Bootstrap -->
