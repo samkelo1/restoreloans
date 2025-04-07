@@ -1,3 +1,5 @@
+import { API_URL } from './base.js'; // Import the API_URL constant
+
 document.getElementById('registerForm').addEventListener('submit', async function (event) {
     event.preventDefault();
 
@@ -18,7 +20,7 @@ document.getElementById('registerForm').addEventListener('submit', async functio
     }
 
     try {
-        const response = await fetch('https://restoreloans-apis.onrender.com/auth/register', {
+        const response = await fetch(`${API_URL}/auth/register`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
